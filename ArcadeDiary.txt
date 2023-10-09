@@ -1,0 +1,85 @@
+I decided i wanted to try make a raycaster arcade shooter. The goal 
+will be to have  the highest score by living long and shooting as
+many enemies as you can before dying.
+
+[5/9]
+I made a basic map with walls using an array to make a grid. The 
+player also moves in 2D, and the next step would be making 
+functioning collision.
+
+[6/9]
+I tried making it without the grid, seeing that it's be a pain to 
+check every square, but soon realised that the lack of consistent
+measurements made it an even bigger pain in the ass.
+I've now finished making collision for my character, and have an 
+idea for how to achive the same results with my rays: check, jump
+25 pixels, then check again. This should make it super quick, 
+though i might need to lower the jump distance to make the 
+measurements more accurate.
+The only proper bug i've found is that yuou can slide across 
+vertical surfaces, but not horizontal ones.
+Next step is to make it possible for the character's rays to 
+follow the direction the player is pointing instead of looking 
+straight up. 
+
+[Intermission]
+Sick af (not in the cool way)
+
+[18/9]
+Came back from sickness with a passion. The rays now follow the 
+player, and collision work like a charm. I used the same collision
+check I use for my player for each of the rays, though it becomes
+incredibly slow when adding in more rays.
+I doubt repurposing the current body-collision will work, so I'll 
+start on something new tomorrow to make the process faster.
+I've yet to find a solution to the "wall-slide" bug, but i don't
+particularly care right now anyways.
+
+[20/9]
+"Make something new" worked wonders. I've replaced the old 
+collision check with a new one that checks nearby walls instead 
+of all of them; to say it was "faster" would be an understatement.
+Shit's fast.
+So fast I finished making the rest of the raycaster engine by the
+end of the day. I now have a bird's eye view and 'head' view, 
+which simulates what the player is seeing. 
+Next step: Enemies.
+
+[25/9]
+Textures. Not real ones, but arrays of 1s and 0s that render as 
+textures. The one issue i have is that it doesn't look particularly 
+pretty: the "pixels" are all of differing sized, and they stretch.
+I'll try to solve it tomorrow, but if that doensn't work I'll change
+the texture size.  
+
+[26/9]
+I tried to get the program to work, but it didn't.
+A single variable keeps giving me wrong data, and nothing I do will 
+ever fix it permanently. I tried alteriung it's value directly, but 
+it keeps giving itself a different value instead. 
+Worst part? The program doesn't seem to notice that it's doing this.
+I can make several printf() in a row, but only the last one will tell
+me the wrong value. God is dead, Sebbe is confused, and if I can't 
+solve this tomorrow I'll just delete the whole thing and start anew.
+
+[27/9]
+I deleted the whole thing and started anew.
+No more boogeymen lurk in my code.
+Shit just works.
+Now in 25x5 texture format. Less Ugly.
+
+[Intermission]
+Sick again
+
+[6/10]
+Last day, according to the deadline, and there's still quite a bit I
+have to do. Namely: enemies.
+
+[7/10] 
+I've already gone past the initial deadline.
+Time to make everything else work.
+I've already run out of time, so there's no point trying to make it 
+good.
+Just make it work. 
+Final 2 parts: Make the player shoot; Make enemies respawn in waves.
+
